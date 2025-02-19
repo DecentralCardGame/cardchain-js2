@@ -2,10 +2,9 @@
   "name": "cardchain-js2",
   "version": "0.0.1",
   "author": "lxgr <lxgr@protonmail.com>",
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxgr-linux/cardchain-js2"
+    "url": "https://github.com/DecentralCardGame/cardchain-js2"
   },
   "license": "SEE LICENSE IN LICENSE",
   "publishConfig": {
