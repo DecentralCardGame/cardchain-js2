@@ -1,0 +1,10 @@
+syntax = "proto3";
+package cardchain.cardchain;
+
+option go_package = "github.com/DecentralCardGame/cardchain/x/cardchain/types";
+
+message Server {
+  string reporter = 1;
+  uint64 invalidReports = 2;
+  uint64 validReports = 3;
+}

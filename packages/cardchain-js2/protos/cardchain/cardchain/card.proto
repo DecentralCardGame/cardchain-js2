@@ -1,0 +1,64 @@
+syntax = "proto3";
+package cardchain.cardchain;
+
+import "gogoproto/gogo.proto";
+import "cosmos/base/v1beta1/coin.proto";
+
+option go_package = "github.com/DecentralCardGame/cardchain/x/cardchain/types";
+
+message Card {
+  string owner = 1;
+  string artist = 2;
+  bytes content = 3;
+  uint64 image_id = 4;
+  bool fullArt = 5;
+  string notes = 6;
+  CardStatus status = 7;
+  cosmos.base.v1beta1.Coin votePool = 8 [ (gogoproto.nullable) = false ];
+  repeated string voters = 14;
+  uint64 fairEnoughVotes = 9;
+  uint64 overpoweredVotes = 10;
+  uint64 underpoweredVotes = 11;
+  uint64 inappropriateVotes = 12;
+  int64 nerflevel = 13;
+  bool balanceAnchor = 15;
+  bool starterCard = 16;
+  CardRarity rarity = 17;
+}
+
+enum CardStatus {
+  none = 0;
+  scheme = 1;
+  prototype = 2;
+  trial = 3;
+  permanent = 4;
+  suspended = 5;
+  banned = 6;
+  bannedSoon = 7;
+  bannedVerySoon = 8;
+  adventureItem = 9;
+}
+
+enum CardRarity {
+  common = 0;
+  uncommon = 1;
+  rare = 2;
+  exceptional = 3;
+  unique = 4;
+}
+
+enum CardClass {
+  nature = 0;
+  culture = 1;
+  mysticism = 2;
+  technology = 3;
+}
+
+enum CardType {
+  place = 0;
+  action = 1;
+  entity = 2;
+  headquarter = 3;
+}
+
+message TimeStamp { uint64 timeStamp = 1; }

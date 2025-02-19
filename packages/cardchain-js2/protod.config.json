@@ -1,0 +1,15 @@
+{
+  "repos": [
+    { "owner": "cosmos", "repo": "cosmos-sdk" },
+    { "owner": "DecentralCardGame", "repo": "Cardchain", "branch": "242-cosmos-v50"}
+  ],
+  "protoDirMapping": {
+    "gogo/protobuf/master": "."
+  },
+  "outDir": "protos",
+  "ssh": true,
+  "tempRepoDir": "git-modules",
+  "targets": [
+    "cardchain/**/*.proto"
+  ]
+}
